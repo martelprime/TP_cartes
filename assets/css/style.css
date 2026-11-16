@@ -7,7 +7,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #f4f1e9;
-  background: #17283b;
+  background: #1556b8;
 }
 
 .entete {
@@ -33,19 +33,8 @@ body {
 }
 
 .intro {
-  color: #b8c5d5;
+  color: #184072;
   font-size: 1rem;
-}
-
-.galerie-section {
-  width: min(1180px, 94%);
-  margin: 34px auto;
-  padding: 24px;
-  border: 1px solid rgba(200, 155, 60, 0.55);
-  border-radius: 9px;
-  background-color: #29445a;
-  background-image: radial-gradient(rgba(255,255,255,0.055) 1px, transparent 1px);
-  background-size: 16px 16px;
 }
 
 .galerie {
@@ -62,11 +51,10 @@ body {
   --accent: #52758b;
   width: 250px;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.28);
+  border: 1px solid rgb(253, 251, 251);
   border-radius: 10px;
   color: var(--couleur-texte);
   background: var(--fond-carte);
-  box-shadow: 0 5px 14px rgba(0,0,0,0.22);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -112,18 +100,6 @@ body {
   font-size: 0.72rem;
 }
 
-/* Couleurs adaptées à l'univers de chaque champion */
-.aatrox { --fond-carte: #f4e2df; --couleur-texte: #4a201f; --accent: #a52b2b; }
-.ahri { --fond-carte: #f0e4f6; --couleur-texte: #382348; --accent: #9b59b6; }
-.yasuo { --fond-carte: #e1edf2; --couleur-texte: #203b50; --accent: #397b9d; }
-.jinx { --fond-carte: #f6e2ed; --couleur-texte: #49243a; --accent: #c04485; }
-.leesin { --fond-carte: #f4ead8; --couleur-texte: #49331e; --accent: #a66a2b; }
-.lux { --fond-carte: #f8f0cf; --couleur-texte: #51451e; --accent: #b38a24; }
-.thresh { --fond-carte: #e0e9e8; --couleur-texte: #203b3b; --accent: #397c78; }
-.ezreal { --fond-carte: #e2eaf6; --couleur-texte: #233957; --accent: #4e79b8; }
-.darius { --fond-carte: #eee0df; --couleur-texte: #492323; --accent: #9e3939; }
-
-/* Cartes spéciales, plus mises en avant comme dans le modèle du TP */
 .carte.doree {
   border-color: #e1b84f;
   background: linear-gradient(145deg, #f7e8b4 0%, #d8ad4c 100%);
@@ -138,31 +114,9 @@ body {
   border-top-color: rgba(103, 71, 25, 0.3);
 }
 
-/* Pied de page */
 footer {
   padding: 4px 20px 28px;
   color: #aebdca;
   text-align: center;
   font-size: 0.8rem;
-}
-
-/* Adaptation aux petits écrans */
-@media (max-width: 600px) {
-  .galerie-section {
-    width: 96%;
-    padding: 14px;
-    margin: 20px auto;
-  }
-
-  .galerie {
-    gap: 14px;
-  }
-
-  .carte {
-    width: min(100%, 330px);
-  }
-
-  .carte img {
-    height: 180px;
-  }
 }
