@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f4f1e9;
+  background: #17283b;
+}
+
+.entete {
+  text-align: center;
+  padding: 42px 20px 36px;
+  background: #101b2c;
+  border-bottom: 4px solid #c89b3c;
+}
+
+.surtitre-entete {
+  margin-bottom: 10px;
+  color: #c89b3c;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.entete h1 {
+  margin-bottom: 12px;
+  color: #f0e6d2;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.intro {
+  color: #b8c5d5;
+  font-size: 1rem;
+}
+
+.galerie-section {
+  width: min(1180px, 94%);
+  margin: 34px auto;
+  padding: 24px;
+  border: 1px solid rgba(200, 155, 60, 0.55);
+  border-radius: 9px;
+  background-color: #29445a;
+  background-image: radial-gradient(rgba(255,255,255,0.055) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.galerie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 18px;
+}
+
+.carte {
+  --fond-carte: #f4f1e9;
+  --couleur-texte: #243447;
+  --accent: #52758b;
+  width: 250px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 10px;
+  color: var(--couleur-texte);
+  background: var(--fond-carte);
+  box-shadow: 0 5px 14px rgba(0,0,0,0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carte img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.contenu {
+  padding: 17px 18px 16px;
+}
+
+.surtitre {
+  margin-bottom: 9px;
+  color: var(--accent);
+  font-size: 0.64rem;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+}
+
+.carte h2 {
+  margin-bottom: 9px;
+  color: var(--couleur-texte);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.35rem;
+}
+
+.contenu > p:not(.surtitre):not(.popularite) {
+  min-height: 65px;
+  color: var(--couleur-texte);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.popularite {
+  margin-top: 13px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(30, 40, 55, 0.2);
+  color: var(--accent);
+  font-size: 0.72rem;
+}
+
+/* Couleurs adaptées à l'univers de chaque champion */
+.aatrox { --fond-carte: #f4e2df; --couleur-texte: #4a201f; --accent: #a52b2b; }
+.ahri { --fond-carte: #f0e4f6; --couleur-texte: #382348; --accent: #9b59b6; }
+.yasuo { --fond-carte: #e1edf2; --couleur-texte: #203b50; --accent: #397b9d; }
+.jinx { --fond-carte: #f6e2ed; --couleur-texte: #49243a; --accent: #c04485; }
+.leesin { --fond-carte: #f4ead8; --couleur-texte: #49331e; --accent: #a66a2b; }
+.lux { --fond-carte: #f8f0cf; --couleur-texte: #51451e; --accent: #b38a24; }
+.thresh { --fond-carte: #e0e9e8; --couleur-texte: #203b3b; --accent: #397c78; }
+.ezreal { --fond-carte: #e2eaf6; --couleur-texte: #233957; --accent: #4e79b8; }
+.darius { --fond-carte: #eee0df; --couleur-texte: #492323; --accent: #9e3939; }
+
+/* Cartes spéciales, plus mises en avant comme dans le modèle du TP */
+.carte.doree {
+  border-color: #e1b84f;
+  background: linear-gradient(145deg, #f7e8b4 0%, #d8ad4c 100%);
+}
+
+.carte.doree .surtitre,
+.carte.doree .popularite {
+  color: #674719;
+}
+
+.carte.doree .popularite {
+  border-top-color: rgba(103, 71, 25, 0.3);
+}
+
+/* Pied de page */
+footer {
+  padding: 4px 20px 28px;
+  color: #aebdca;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* Adaptation aux petits écrans */
+@media (max-width: 600px) {
+  .galerie-section {
+    width: 96%;
+    padding: 14px;
+    margin: 20px auto;
+  }
+
+  .galerie {
+    gap: 14px;
+  }
+
+  .carte {
+    width: min(100%, 330px);
+  }
+
+  .carte img {
+    height: 180px;
+  }
+}
