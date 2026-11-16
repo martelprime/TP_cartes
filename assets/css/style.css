@@ -1,0 +1,44 @@
+body {
+    background-color: #17283b;
+    font-family: Arial;
+}
+
+.galerie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carte {
+    width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carte img {
+    width: 100%;
+}
+
+.carte p, .carte h2 {
+    margin: 15px;
+}
+
+.surtitre {
+    font-size: 12px;
+}
+
+.aatrox { background-color: #f1d9d6; }
+.ahri { background-color: #eadcf5; }
+.yasuo { background-color: #dceaf2; }
+.jinx { background-color: #f4dce9; }
+.leesin { background-color: #eee1ce; }
+.lux { background-color: #f6edc9; }
+.thresh { background-color: #dcebe6; }
+.ezreal { background-color: #dce8f5; }
+.darius { background-color: #efdada; }
+
+.doree {
+    background-color: #e8c66d;
+}
